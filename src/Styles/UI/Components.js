@@ -15,22 +15,22 @@ export const Button = styled.a`
    background-color: ${greenColor};
    color: ${whiteColor};
    text-align: center;
-   padding: 15px 165px;
-   border-radius: 60px;s
+   padding: 15px 130px;
+   border-radius: 60px;
    border: none;
-   margin: 45px 0;
-   font-size: 30px;
+   margin: 30px 0;
+   font-size: 20px;
   
   };
 `;
 
 export const H1 = styled.h1`
   color: ${whiteColor};
-  font-size: 20px;
+  font-size: 18px;
   margin: 4px;
 
   @media screen and (min-width: 600px) {
-    font-size: 45px;
+    font-size: 35px;
     margin: 8px;
   }
 `;
@@ -41,6 +41,6 @@ export const Subtitle = styled.p`
   font-size: 12px;
 
   @media screen and (min-width: 600px) {
-    font-size: 30px;
+    font-size: 16px;
   }
 `;
