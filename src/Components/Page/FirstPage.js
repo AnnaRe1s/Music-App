@@ -7,6 +7,7 @@ import background from "../../Assets/image/backgroound_blur.png";
 
 // css
 import "./FirsPage.css";
+import { Button, H1, Subtitle} from "../../Styles/UI/Components";
 
 export default function FirstPage() {
   return (
@@ -15,12 +16,12 @@ export default function FirstPage() {
       <div className="blur">
         <div className="background__acesse">
           <img src={logo} alt="Spotify Logo" className="logo" />
-          <h1>MILLIONS OF SONGS </h1>
-          <h1>GRATIS NO SPOTIFY</h1>
-          <button>Log In</button>
-          <p>
-            Don't have an account? <Link to="/signup">sign up</Link>
-          </p>
+          <H1>Millions of songs.</H1>
+          <H1>Gratis no Spotify.</H1>
+          <Button href="/login"> Log In</Button>
+          <Subtitle>
+            Don't have an account? <Link to="/signup">SIGN UP</Link>
+          </Subtitle>
         </div>
       </div>
     </div>
