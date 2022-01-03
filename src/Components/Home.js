@@ -12,8 +12,8 @@ import {
   Carrossel,
 } from "../Styles/Variables";
 
-import "./styles/Home.css";
 import image from "../Assets/image/top-musica.jpeg";
+import CardHero from "./CardHero";
 
 const DZ = window.DZ;
 
@@ -36,22 +36,12 @@ export default function Home() {
 
   return (
     <Background>
-      <>
-        <Link to="/top10">
-          <ImgHero src={image} alt="logo top 10" />
-        </Link>
+     
+        <CardHero />
+   
 
-        <H1Background>
-          <H1>TOP 10 MELHORES MUSICAS</H1>
-          <Link to="/top10" style={{ textDecoration: "none" }}>
-            <Button>Saiba Mais</Button>
-          </Link>
-        </H1Background>
-      </>
-
-      <>
         <H1>Seus favoritos</H1>
-      </>
+     
 
       <>
         <H1> Melhores Albums</H1>
@@ -63,7 +53,7 @@ export default function Home() {
                   <img src={element.cover_medium} alt={element.title} />
                   <H2>{element.title}</H2>
                 </div>
-                <Button href={element.link}>
+                <Button href={element.link} target="_blank">
                   Escute a playlist na Dezzer{" "}
                   <i className="fas fa-volume-up"></i>{" "}
                 </Button>
@@ -85,7 +75,7 @@ export default function Home() {
                     <H2>{element.title}</H2>
                   </div>
 
-                  <Button href={element.link} target="blank">
+                  <Button href={element.link} target="_blank">
                     escute a playlist na Dezzer
                   </Button>
                 </BackgroundCards>

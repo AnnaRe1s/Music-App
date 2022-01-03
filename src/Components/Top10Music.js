@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+
+import { Button, Background, H2, P, ButtonIcon } from "../Styles/Variables";
+import CardHero from "./CardHero";
+import "./styles/CadrSearch.css";
+
 const DZ = window.DZ;
 
 export default function Top10Music() {
@@ -25,32 +30,37 @@ export default function Top10Music() {
   }, []);
 
   return (
-    <>
+    <Background>
+      <CardHero />
       {data.map((element) => {
         return (
-          <div key={element.id}>
-            <img
-              src={element.artist.picture_medium}
-              alt={`music ${element.title}`}
-            />
+          <div className="card__top__10" key={element.id}>
+            <div className="info">
+              <img
+                className="img__Top__10"
+                src={element.artist.picture_medium}
+                alt={`music ${element.title}`}
+              />
+              <div>
+                <H2>{element.title}</H2>
+                <P>{element.artist.name}</P>
+              </div>
+            </div>
 
-            <p>{element.title}</p>
-            <p>{element.artist.name}</p>
-            <p>{element.duration}</p>
-            <a href={element.link} target="blank">
-              text
-            </a>
-            <button
+            <P>
+              <i class="far fa-clock"></i> {element.duration}
+            </P>
+
+            <ButtonIcon
               onClick={() => {
-                console.log("===", element)
+                console.log("===", element);
                 element.like = true;
-
               }}
             >
-              favoritos
-            </button>
+              <i class="fas fa-heart"></i>
+            </ButtonIcon>
 
-            <button
+            <ButtonIcon
               name={element.title}
               type="button"
               onClick={() => {
@@ -63,11 +73,15 @@ export default function Top10Music() {
                 }
               }}
             >
-              Play/Pause
-            </button>
+              <i class="fas fa-play"></i> / <i class="fas fa-pause"></i>
+            </ButtonIcon>
+
+            <Button href={element.link} target="blank">
+              Escute na Dezzer <i class="fas fa-volume-up"></i>
+            </Button>
           </div>
         );
       })}
-    </>
+    </Background>
   );
 }

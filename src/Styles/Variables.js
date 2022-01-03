@@ -3,12 +3,14 @@ import styled from "styled-components";
 // Styles Text
 export const H1 = styled.h1`
   margin: 60px 10px 10px 60px;
+  color: white;
 `;
 
 export const H1Background = styled.h1`
   text-align: center;
   padding-top: 20px;
   background-color: rgba(0, 0, 0, 0.425);
+  color: white;
   position: absolute;
   top: 0;
   width: 100%;
@@ -16,8 +18,14 @@ export const H1Background = styled.h1`
 `;
 
 export const H2 = styled.h2`
+  color: white;
   margin: 10px;
   font-size: 18px;
+`;
+
+export const P = styled.p`
+  font-size: 12px;
+  color: white;
 `;
 
 // Buttons
@@ -29,6 +37,15 @@ export const Button = styled.a`
   color: white;
   text-align: center;
   font-size: 15px;
+`;
+
+export const ButtonIcon = styled.button`
+  border: none;
+  background-color: rgb(95, 0, 40);
+  color: white;
+  border-radius: 15px;
+  padding: 0px 10px;
+  height: 30px;
 `;
 
 // Backgrounds
