@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import store from "./Redux/store";
-import { Provider } from "react-redux";
+import "./Components/styles/Global.css";
 
-import App from "./Components/App";
-import "./Styles/StylesGlobal.css"
+import { Provider } from "react-redux";
+import store from "./Components/Redux";
+
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>

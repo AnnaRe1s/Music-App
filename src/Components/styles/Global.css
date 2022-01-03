@@ -1,0 +1,19 @@
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0%;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(102, 102, 102);
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 20px;
+  border: 1px solid rgba(59, 59, 59, 0.493);
+}

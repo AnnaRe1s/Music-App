@@ -1,0 +1,22 @@
+h1{
+  color: white;
+}
+
+.cardSearch {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardSearch img {
+  height: 60px;
+  margin: 20px;
+}
+
+.cardSearch h1 {
+  font-size: 20px;
+}
+
+.cardSearch p {
+  font-size: 12px;
+}
