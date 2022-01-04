@@ -1,6 +1,15 @@
 # Music app
  In this application you can view the TOP 10 songs, albums and podcasts from Dezzer!
  
+ ## About
+This application was developed using
+- Deezer's API.
+- StyledComponents.
+
+The biggest challenge during the development of this project was Redux, as I have little knowledge
+ 
+ 
+ 
 ### Install
 
 To run application on your local machine you need it.
