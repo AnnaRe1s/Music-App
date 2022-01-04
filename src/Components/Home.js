@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import {
   Button,
@@ -7,12 +6,10 @@ import {
   H2,
   Background,
   BackgroundCards,
-  H1Background,
-  ImgHero,
+  ImgCards,
   Carrossel,
 } from "../Styles/Variables";
 
-import image from "../Assets/image/top-musica.jpeg";
 import CardHero from "./CardHero";
 
 const DZ = window.DZ;
@@ -36,12 +33,7 @@ export default function Home() {
 
   return (
     <Background>
-     
-        <CardHero />
-   
-
-        <H1>Seus favoritos</H1>
-     
+      <CardHero link={"/top10"}>Saiba Mais</CardHero>
 
       <>
         <H1> Melhores Albums</H1>
@@ -50,12 +42,11 @@ export default function Home() {
             return (
               <BackgroundCards>
                 <div>
-                  <img src={element.cover_medium} alt={element.title} />
+                  <ImgCards src={element.cover_medium} alt={element.title} />
                   <H2>{element.title}</H2>
                 </div>
                 <Button href={element.link} target="_blank">
-                  Escute a playlist na Dezzer{" "}
-                  <i className="fas fa-volume-up"></i>{" "}
+                  Escute na Dezzer <i className="fas fa-volume-up"></i>{" "}
                 </Button>
               </BackgroundCards>
             );
@@ -71,12 +62,15 @@ export default function Home() {
               return (
                 <BackgroundCards>
                   <div>
-                    <img src={element.picture_medium} alt={element.title} />
+                    <ImgCards
+                      src={element.picture_medium}
+                      alt={element.title}
+                    />
                     <H2>{element.title}</H2>
                   </div>
 
                   <Button href={element.link} target="_blank">
-                    escute a playlist na Dezzer
+                    escute na Dezzer <i className="fas fa-volume-up"></i>
                   </Button>
                 </BackgroundCards>
               );

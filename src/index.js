@@ -2,19 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./Components/styles/Global.css";
-
+import { createStore } from "redux";
 import { Provider } from "react-redux";
-import store from "./Redux/index";
+import musicListReducer from "./Redux/Store";
 
 import App from "./App";
 
+const store = createStore(musicListReducer);
+window.store = store;
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <App />
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

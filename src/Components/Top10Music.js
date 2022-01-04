@@ -1,6 +1,17 @@
 import { useState, useEffect } from "react";
 
-import { Button, Background, H2, P, ButtonIcon } from "../Styles/Variables";
+import {
+  Button,
+  Background,
+  H2,
+  P,
+  ButtonIcon,
+  Cards,
+  Info,
+} from "../Styles/Variables";
+
+import { makeFavorite } from "../Redux/Actions/Action";
+
 import CardHero from "./CardHero";
 import "./styles/CadrSearch.css";
 
@@ -31,7 +42,7 @@ export default function Top10Music() {
 
   return (
     <Background>
-      <CardHero />
+      <CardHero link={"/"}>Home</CardHero>
       {data.map((element) => {
         return (
           <div className="card__top__10" key={element.id}>
