@@ -6,11 +6,11 @@ import {
   H2,
   P,
   ButtonIcon,
-  Cards,
-  Info,
+  CardTop,
+  ImgCards,
+  FlexRow,
 } from "../Styles/Variables";
 
-import { makeFavorite } from "../Redux/Actions/Action";
 
 import CardHero from "./CardHero";
 import "./styles/CadrSearch.css";
@@ -45,10 +45,9 @@ export default function Top10Music() {
       <CardHero link={"/"}>Home</CardHero>
       {data.map((element) => {
         return (
-          <div className="card__top__10" key={element.id}>
-            <div className="info">
-              <img
-                className="img__Top__10"
+          <CardTop key={element.id}>
+            <FlexRow>
+              <ImgCards
                 src={element.artist.picture_medium}
                 alt={`music ${element.title}`}
               />
@@ -56,7 +55,7 @@ export default function Top10Music() {
                 <H2>{element.title}</H2>
                 <P>{element.artist.name}</P>
               </div>
-            </div>
+            </FlexRow>
 
             <P>
               <i class="far fa-clock"></i> {element.duration}
@@ -90,7 +89,7 @@ export default function Top10Music() {
             <Button href={element.link} target="blank">
               Escute na Dezzer <i class="fas fa-volume-up"></i>
             </Button>
-          </div>
+          </CardTop>
         );
       })}
     </Background>

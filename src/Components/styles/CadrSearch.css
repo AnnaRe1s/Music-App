@@ -22,3 +22,13 @@
   flex-direction: row;
   width: 550px;
 }
+
+.input {
+  /* width: 90%;
+  height: 40px;
+  margin: 30px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 15px; */
+}
+

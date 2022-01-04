@@ -99,6 +99,14 @@ export const BackgroundCards = styled.div`
   }
 `;
 
+export const BackgroundSearch = styled.div`
+  background: linear-gradient(180deg, rgb(12, 12, 12), rgb(44, 44, 44));
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+`;
+
 // IMG
 
 export const ImgHero = styled.img`
@@ -122,6 +130,7 @@ export const Img = styled.img`
   margin-bottom: 25px;
 
   @media screen and (min-width: 600px) {
+    width: 185px;
   }
 `;
 
@@ -145,26 +154,6 @@ export const SectionRow = styled.div`
   align-items: center;
 `;
 
-export const Cards = styled.div`
-  background: linear-gradient(180deg, rgb(12, 12, 12), rgb(44, 44, 44));
-  margin: 10px 75px;
-  display: flex;
-  flex-direction: column;
-  width: 187px;
-  padding: 20px;
-  height: 338px;
-
-  @media screen and (min-width: 600px) {
-    
-    background: linear-gradient(180deg, rgb(12, 12, 12), 
-    margin: 20px;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around
-  }
-`;
-
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
@@ -174,4 +163,46 @@ export const Info = styled.div`
     flex-direction: row;
     width: 550px;
   }
+`;
+
+export const CardTop = styled.div`
+  background: linear-gradient(180deg, rgb(12, 12, 12), rgb(44, 44, 44));
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: column;
+}
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    
+  }
+`;
+
+// Input
+export const Input = styled.input`
+  width: 90%;
+  height: 40px;
+  margin: 20px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 15px;
+`;
+
+// Link
+
+export const Links = styled.a`
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  
 `;

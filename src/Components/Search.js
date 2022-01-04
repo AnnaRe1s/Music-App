@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import "./styles/CadrSearch.css";
+import { Input, H2, P, BackgroundSearch, H1, Links } from "../Styles/Variables";
 
 const DZ = window.DZ;
 
@@ -16,29 +17,32 @@ export default function HomePage() {
   }, [input]);
 
   return (
-    <>
-      <div>
-        <input
+    <div>
+      <div className="styledInput">
+        <H1>Pesquise</H1>
+        <Input
+          className="input"
           placeholder="Search"
           onChange={(event) => {
             console.log("name", event.target.value);
             setInput(event.target.value);
           }}
         />
-        <i class="fas fa-search"></i>
       </div>
 
       {data.map((element) => {
         return (
-          <div className="cardSearch">
-            <img src={element.album.cover_small} alt={element.title} />
-            <div>
-              <h1>{element.title}</h1>
-              <p>{element.album.title}</p>
-            </div>
-          </div>
+          <BackgroundSearch>
+            <Links href={element.link} target="_blank">
+              <img src={element.album.cover_small} alt={element.title} />
+              <div>
+                <H2>{element.title}</H2>
+                <P>{element.album.title}</P>
+              </div>
+            </Links>
+          </BackgroundSearch>
         );
       })}
-    </>
+    </div>
   );
 }

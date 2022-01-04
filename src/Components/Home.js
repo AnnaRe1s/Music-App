@@ -11,6 +11,7 @@ import {
 } from "../Styles/Variables";
 
 import CardHero from "./CardHero";
+import Search from "./Search";
 
 const DZ = window.DZ;
 
@@ -34,6 +35,8 @@ export default function Home() {
   return (
     <Background>
       <CardHero link={"/top10"}>Saiba Mais</CardHero>
+
+      <Search />
 
       <>
         <H1> Melhores Albums</H1>
