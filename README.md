@@ -8,7 +8,7 @@ This application was developed using
 
 The biggest challenge during the development of this project was Redux, as I have little knowledge
  
- 
+You can see this app[here!](https://top10dezzer.netlify.app/)
  
 ### Install
 
